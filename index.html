@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayush Mulmi - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ---------------------- HERO + NAVIGATION ---------------------- -->
+    <header id="hero">
+      <!-- FIXED VIDEO BACKGROUND -->
+      <video autoplay loop muted playsinline id="video-background">
+        <source src="videos/background-loop.mp4" type="video/mp4" />
+      </video>
+
+      <!-- FIXED NAVIGATION BAR -->
+      <nav class="navbar">
+        <div class="logo-container">
+          <img src="/images/prayush.jpeg" alt="Profile" class="profile-img" />
+          <span class="logo">Prayush Mulmi</span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="menu-toggle" aria-expanded="false" id="menu-button">
+          ☰
+        </button>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Prayush Mulmi</h1>
+        <p>Student • Developer • UI/UX Enthusiast</p>
+      </div>
+    </header>
+
+    <!-- --------------------------- ABOUT ------------------------------ -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I am a Computer Science student at Herald College. Previously a Xaverian
+        for over a decade, studying at Saint Xavier’s Godawari and Jawalakhel.
+      </p>
+    </section>
+
+    <!-- --------------------------- SKILLS ----------------------------- -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+
+      <div class="skills-container">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">C Programming</div>
+      </div>
+    </section>
+
+    <!-- --------------------------- PROJECTS --------------------------- -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div id="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive portfolio designed with Flexbox & Grid.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>DSA Certificate</h3>
+          <p>Completed certified Data Structures and Algorithms training.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>More Projects Coming</h3>
+          <p>Additional work will be added soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------- CONTACT ---------------------------- -->
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+
+      <p>Feel free to reach out to me!</p>
+
+      <form id="contact-form">
+        <label
+          >Name:
+          <input type="text" id="name" required />
+        </label>
+
+        <label
+          >Email:
+          <input type="email" id="email" required />
+        </label>
+
+        <label
+          >Message:
+          <textarea id="message" required></textarea>
+        </label>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <div id="form-message"></div>
+    </section>
+
+    <!-- --------------------------- FOOTER ----------------------------- -->
+    <footer>
+      <p>© 2025 Prayush Mulmi | Designed by Prayush</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

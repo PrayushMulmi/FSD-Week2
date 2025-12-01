@@ -1,0 +1,215 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  color: white;
+  line-height: 1.6;
+}
+
+/* ------------------- HERO + VIDEO ------------------- */
+#video-background {
+  position: fixed; /* stays fixed behind everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* ensure full coverage */
+  z-index: -1; /* behind content */
+}
+
+#hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  margin-top: 120px; /* pushes content below navbar */
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+/* --------------------- NAVBAR ------------------------ */
+.navbar {
+  position: fixed; /* sticks to top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px); /* frosted effect */
+  background: rgba(0, 0, 0, 0.4); /* soft transparency */
+  z-index: 10; /* above everything */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: auto; /* Aligns nav links to the left */
+  text-align: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  margin-left: auto; /* Moves hamburger button to the right */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* --------------------- SECTIONS ---------------------- */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* ---------------------- SKILLS ------------------------ */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.skill {
+  padding: 1rem 2rem;
+  background: #222;
+  border-radius: 8px;
+}
+
+/* ---------------------- PROJECT GRID ------------------ */
+#projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+/* ---------------------- CONTACT FORM ------------------ */
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  background: #ff9800;
+  border: none;
+  color: black;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------------------- MEDIA QUERIES ------------------ */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Hide navigation links on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px; /* Adjust the position to be below the navbar */
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .section {
+    padding: 5rem 10%;
+  }
+}
